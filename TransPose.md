@@ -25,21 +25,21 @@
 - 具体细节：对于身体姿态的估计，使用一个多阶段的网络，输入6个IMU数据，预测全身关节点的位置。为获得稳定的全局平移量，论文还提出一种基于支持脚的平滑方法，通过线性插值估计人体位移速度。  
 ![image](https://user-images.githubusercontent.com/13820586/169221973-d5daad97-109e-4806-ad46-8134e10aeaf6.png)
 
-算法流程如下：
+- 算法流程如下：
 ![image](https://user-images.githubusercontent.com/13820586/169199173-c6c382cf-d9d8-4723-95a0-ee1ef11b8ad0.png)
 
-输入：
+- **输入**：
 ![image](https://user-images.githubusercontent.com/13820586/169222182-1ba8dee3-69c2-4707-b57f-8d27eb427fcb.png)
 
-Loss Function：  
-预测旋转角theta
+**Loss Function**：  
+- 预测旋转角theta
 ![image](https://user-images.githubusercontent.com/13820586/169222314-897add58-e5b8-438f-aaff-e05b2e567a27.png)
 
 ![image](https://user-images.githubusercontent.com/13820586/169222385-1e25b072-66ff-4ec4-a941-92bd05b68830.png)
 
 ![image](https://user-images.githubusercontent.com/13820586/169222483-64a7046d-47fa-4fe4-988b-0e2a11d4f8e2.png)
 
-预测V阶段：
+- 预测全局平移速度v：
 计算支撑脚速度：
 ![image](https://user-images.githubusercontent.com/13820586/169222771-bdf246c1-4378-4dd7-8204-20ae99c65a2c.png)
 
