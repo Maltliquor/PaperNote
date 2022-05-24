@@ -215,6 +215,17 @@ absolute rotation x inverse of absolute rotation of bind pose = absolute rotatio
 ## 校准数据
 定义：将数据从局部传感器坐标系转换到SMPL坐标系
 
+1. 我们首先把传感器坐标系的坐标轴与SMPL坐标系相应的轴对齐,即把IMUx轴朝左，y轴朝上，z轴朝前。然后,把此时传感器的朝向设作PIM，也就是坐标系FI到坐标系FM的转移矩阵。  
+![image](https://user-images.githubusercontent.com/13820586/169980643-aa3e1c78-1cd4-4eab-b534-b3c65453e984.png)
+
+2. 
+![image](https://user-images.githubusercontent.com/13820586/169980916-a344709c-7e7b-44e1-bcea-0d43e3d3ed1d.png)
+传感器在全局坐标系下的旋转矩阵RI-sensor  
+在全局坐标系下的绝对朝向是RI-bone  
+骨骼和传感器的旋转距离是RI-offset
+
+
+
 ## 正则化数据
 
 ![image](https://user-images.githubusercontent.com/13820586/169965692-f2792043-c29d-4e77-8b32-aa7d9b7af67f.png)
