@@ -208,7 +208,7 @@ absolute rotation x inverse of absolute rotation of bind pose = absolute rotatio
 
 # 输入数据
 ## 获取原始的IMU数据
-- 加速度a：[frames, 6, 3]，6个关节点，xyz方向，相对于传感器的局部坐标系
+- 加速度a：[frames, 6, 3]，6个关节点，xyz方向，左手坐标系，相对于传感器的局部坐标系
 - 旋转矩阵R：[frames, 6, 3, 3]，6个关节点，旋转矩阵是从四元数转化过来的，相对于全局坐标系
 
 
